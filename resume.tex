@@ -1,0 +1,253 @@
+
+
+\documentclass[a4,10pt]{article}
+
+%%%%%%% --------------------------------------------------------------------------------------
+%%%%%%%  STARTING HERE, DO NOT TOUCH ANYTHING 
+%%%%%%% --------------------------------------------------------------------------------------
+
+\usepackage{latexsym}
+\usepackage[empty]{fullpage}
+\usepackage{titlesec}
+ \usepackage{marvosym}
+\usepackage[usenames,dvipsnames]{color}
+\usepackage{verbatim}
+\usepackage[hidelinks]{hyperref}
+\usepackage{fancyhdr}
+\usepackage{multicol}
+\usepackage{hyperref}
+\usepackage{csquotes}
+\usepackage{tabularx}
+\hypersetup{colorlinks=true,urlcolor=black}
+\usepackage[11pt]{moresize}
+\usepackage{setspace}
+\usepackage{fontspec}
+\usepackage[inline]{enumitem}
+\usepackage{array}
+\newcolumntype{P}[1]{>{\centering\arraybackslash}p{#1}}
+\usepackage{anyfontsize}
+
+%%%% Set Margins
+\usepackage[margin=1cm, top=1cm]{geometry}
+
+%%%% Set Fonts
+\setmainfont[
+BoldFont=SourceSansPro-Semibold.otf, %SourceSansPro-Bold.otf
+ItalicFont=SourceSansPro-RegularIt.otf
+]{SourceSansPro-Regular.otf}
+\setsansfont{SourceSansPro-Semibold.otf}
+
+%%%% Set Page
+\pagestyle{fancy}
+\fancyhf{} 
+\fancyfoot{}
+\renewcommand{\headrulewidth}{0pt}
+\renewcommand{\footrulewidth}{0pt}
+
+%%%% Set URL Style
+\urlstyle{same}
+
+%%%% Set Indentation
+\raggedbottom
+\raggedright
+\setlength{\tabcolsep}{0in}
+
+%%%% Set Secondary Color
+\definecolor{UI_blue}{RGB}{32, 64, 151}
+
+%%%% Define New Commands
+\usepackage[style=nature, maxbibnames=3]{biblatex}
+\addbibresource{Publications.bib}
+
+%%%% Bold Name in Publications
+\renewcommand*{\mkbibnamegiven}[1]{%
+\ifitemannotation{highlight}
+{\textbf{#1}}
+{#1}}
+
+\renewcommand*{\mkbibnamefamily}[1]{%
+\ifitemannotation{highlight}
+{\textbf{#1}}
+{#1}}
+
+%%%% Set Sections formatting
+\titleformat{\section}{
+\color{UI_blue} \scshape \raggedright \large 
+}{}{0em}{}[\vspace{-10pt} \hrulefill \vspace{-6pt}]
+
+%%%% Set Subtext Formatting
+\newcommand{\subtext}[1]{
+#1\par\vspace{-0.2cm}}
+
+% \newcommand{\subtextit}[1]{\vspace{0.15cm}
+% \textit{ #1 \vspace{-0.2cm}} }
+
+%%%% Set Item Spacing
+\setlist[itemize]{align=parleft,left=0pt..1em}
+
+%%%% New Itemize "Zitemize" Formatting - tighter spacing than itemize
+\newenvironment{zitemize}{
+\begin{itemize}\itemsep0pt \parskip0pt \parsep1pt}
+{\end{itemize}\vspace{-0.5cm}}
+
+
+%%%% Define Skills Bold Formatting
+\newcommand{\hskills}[1]{
+\textbf{\bfseries #1} }
+
+%%%% Set Subsection formatting
+\titleformat{\subsection}{\vspace{-0.1cm} 
+\bfseries \fontsize{11pt}{2cm}}{}{0em}{}[\vspace{-0.2cm}]
+
+%%%%%%% --------------------------------------------------------------------------------------
+%%%%%%% --------------------------------------------------------------------------------------
+%%%%%%%  END OF "DO NOT TOUCH" REGION
+%%%%%%% --------------------------------------------------------------------------------------
+%%%%%%% --------------------------------------------------------------------------------------
+
+\begin{document}
+
+%%%%%%% --------------------------------------------------------------------------------------
+%%%%%%%  HEADER
+%%%%%%% --------------------------------------------------------------------------------------
+\begin{center}
+    \begin{minipage}[b]{0.24\textwidth}
+            \large Gurugram, Haryana \\
+            \large (+91)-8239820819 \\
+            \large \href{mailto:passrija.aashish@gmail.com}{passrija.aashish@gmail.com} 
+    \end{minipage}% 
+    \begin{minipage}[b]{0.5\textwidth}
+            \centering
+            {\HUGE Aashish Passrija} \\ %
+            \vspace{0.1cm}
+    \end{minipage}% 
+    \begin{minipage}[b]{0.24\textwidth}
+            \flushright \large  %Willing to Relocate
+            {\href{https://www.linkedin.com/in/aashish-passrija-649068102/}{linkedin.com/in/akp2603/} } \\
+            \href{https://github.com/akp2603}{github.com/akp2603}
+    \end{minipage}   
+    
+\vspace{-0.15cm} 
+{\color{UI_blue} \hrulefill}
+\end{center}
+
+%%%%%%% --------------------------------------------------------------------------------------
+%%%%%%%  WORK EXPERIENCE
+%%%%%%% --------------------------------------------------------------------------------------
+\section{Experience}
+
+%%% ----- Best way to write items (Credit - ResumePuppy.com)
+        % \item Developed AngularJS microservice to automate parsing of ~300 emails/day for efficient service request categorization using Linux MBox & Perl scripts; reduced manual re-allocation by 87%.
+        % \item Led the development, build and bring-up execution of Lyft’s first functional AV platform from start to finish; established fleet-grade product reliability over 5 months.
+        % \item Enhanced user experience by fine-tuning stored procedures & SQL queries for efficient data retrieval from ~4M records accessed by 5000+ users worldwide.
+        % \item Built a custom menu single handedly using HTML5, CSS3, XML and JSP and improved the performance of existing application by tuning the PL/SQL scripts by 20\% and reduced on-migration time.
+%%%%%%% ----------------------------------- Role 5 ----------------------------------- %%%%%%%
+\subsection*{Senior Software Development Engineer \hfill April 2020 --- Present} 
+\subtext{\href{https://tech.anarock.com/}{Anarock Technology} \hfill Mumbai, IN} 
+    \begin{zitemize}
+
+        \item {\bf CP Sourcing App: } Devised a low-latency, concurrent backend using RoR, Sidekiq, RabbitMQ and Postgres, resulting in better Channel Partner management and commission distribution.
+        \item Optimized most time consuming APIs by 20\%-70\%, by using proper indexing strategies, caching with Redis, and making them asynchronous. Identified causes of frequent outages caused by background jobs in Sidekiq, or unoptimized API calls, and refactored them, thereby making the systems highly available.
+        \item Initiated and led the API structure standardisation which streamlined development cycles across teams.
+        \item Responsible for hiring and mentoring developers, maintaining coding standards across products, taking tech decisions across teams.
+        \item {\bf Notifications \& Communication}: Engineered independently scalable SMS, Email, OTP and Notification microservices, written in Elixir using Phoenix and Ruby on Rails, using Postgres as the backing database.
+    \end{zitemize}
+
+%%%%%%% ----------------------------------- Role 5 ----------------------------------- %%%%%%%
+\subsection*{Software Development Engineer \hfill June 2018 --- April 2020} 
+\subtext{\href{https://tech.anarock.com/}{Anarock Technology} \hfill Mumbai, IN} 
+    \begin{zitemize}
+        \item {\bf Reimbursement App: } Developed a tool in RoR and PostgreSQL, that completely eliminates the manual reimbursement submission process. The tool was projected to save around \$500k annually.
+        \item Worked on the Lead Churning Algorithms resulting in increased number of Site Visits, by ~16\%, which is the most decisive factor for bookings.
+        \item Redesigned the complete agent-to-lead relationship, which forms the core of the business, involving schema modifications and rewriting major part of the codebase.
+        \item Set up documentations and processes to automate client onboarding, reducing the complete process from days to minutes.
+        \item Refactored repeated code out of the largest core repository into reusable code snippets, resulting in 20\% code reduction, hence making following iterations, bug fixes and maintenance easier.
+    \end{zitemize}        
+
+%%%%%%% ----------------------------------- Role 4 ----------------------------------- %%%%%%%
+\subsection*{Software Development Intern, Asset and Wealth Management \hfill July 2017 --- Dec 2017} 
+\subtext{\href{https://www.jpmorganchase.com/}{JP Morgan Chase and Co.} \hfill Bengaluru, IN} 
+    \begin{zitemize}
+        \item {\bf Asset Contract Parser: }A text classifier based web app to parse asset contracts between the bank and the clients containing various sections using Long Short Term Memory Networks.
+        \item Contributed by building backend RESTful APIs that consumed the trained models and frontend that consumed the APIs.
+        \item The project turned out to be a successful proof of concept expected to reduce costs by \$700k-\$800k, annually.
+        \item Technologies Used: Python, Flask, Javascript, HTML, CSS.
+    \end{zitemize}
+
+
+%%%%%%% --------------------------------------------------------------------------------------
+%%%%%%%  EDUCATION
+%%%%%%% --------------------------------------------------------------------------------------
+\section{Education }
+% \subsection*{B.E. Electrical and Electronics, {\normalsize \normalfont \newline Birla Institute of Technology and Science, Pilani, India , GPA: 7.41/10.00} \hfill Aug 2013 --- May 2018} 
+% \vspace{0.1cm}
+
+% \subsection*{Master of Science in Biological Sciences, {\normalsize \normalfont \newline Birla Institute of Technology and Science, Pilani, India , GPA: 7.41/10.00} \hfill Aug 2013 --- May 2018} 
+
+
+{\bf Birla Institute of Technology and Science, Pilani, India} \hfill {\em August 2013 - May 2018} 
+\\ B.E. Electrical and Electronics \hfill { GPA: 7.41/10}
+\\ M.Sc. Biological Sciences
+
+
+%%%%%%% --------------------------------------------------------------------------------------
+%%%%%%%  ACADEMIC PROJECTS
+%%%%%%% --------------------------------------------------------------------------------------
+\section{Projects} %% (Or "Research", select as appropriate)
+
+%%% ----- Best way to write items (Credit - FAANGPath)
+        % \item Achieved X\% growth for XYZ using A, B, and C skills.
+        % \item Led XYZ which led to X\% of improvement in ABC
+        % \item Developed XYZ that did A, B, and C using X, Y, and Z. 
+
+
+%%%%%%% ----------------------------------- Role 1 ----------------------------------- %%%%%%%
+\subsection*{ROBUST INFLUENCE MAXIMIZATION \hfill Jan 2018 --- Feb 2018} 
+    \begin{zitemize}
+        \item A machine learning project where Influence maximization is the aim i.e. selecting the top k seed nodes to maximize their influence coverage under certain models. 
+        \item Algorithm implemented here was IRIE which integrates influence ranking and influence estimation methods for influence maximization. 
+    \end{zitemize}
+
+
+%%%%%%% ----------------------------------- Role 2 ----------------------------------- %%%%%%%
+\subsection*{A SEARCH ENGINE \hfill Feb 2018 -- Mar 2018} 
+    \begin{zitemize}
+        \item A text-based search engine (based on Vector Space Model). 
+        \item The project had several stages where indexing component was built, which took a large collection of text and produced a searchable
+        persistent data structure. Thereafter, a searching component was added, based on the Vector Space Model.
+    \end{zitemize}
+
+%%%%%%% --------------------------------------------------------------------------------------
+%%%%%%%  SKILLS
+%%%%%%% --------------------------------------------------------------------------------------
+\section{Technical Skills}
+\begin{tabular}{p{20em} p{1em} p{43em}}
+\hskills{Programming Languages and Concepts:}&  &  Ruby, Java, Go, Elixir, Git \\
+\hskills{Frameworks:} &  & Rails, Phoenix, RabbitMQ  \\
+\hskills{Databases} &  & PostgreSQL, Redis, Memcached \\
+\hskills{DevOps} &  & AWS, Nginx \\
+\end{tabular}
+\vspace{-0.2cm}
+
+
+
+%%%%%%% --------------------------------------------------------------------------------------
+%%%%%%%  VOLUNTEER EXPERIENCE
+%%%%%%% --------------------------------------------------------------------------------------
+% \section{Volunteer (or LEADERSHIP) Experience}
+
+%%%%%%% ----------------------------------- Role 6 ----------------------------------- %%%%%%%
+% \subsection*{Position, Org \hfill Mon yyyy --- Mon yyyy} 
+%     \begin{zitemize}
+            % \item \textbf{Short Project Title.} {Build a project that does something and had quantified success using A, B, and C.}
+%     \end{zitemize}
+
+
+%%%%%%% ----------------------------------- Role 6 ----------------------------------- %%%%%%%
+% \subsection*{Position, Org \hfill Mon yyyy --- Mon yyyy} 
+%     \begin{zitemize}
+            % \item \textbf{Short Project Title.} {Build a project that does something and had quantified success using A, B, and C.}
+%     \end{zitemize}
+
+%%%%%%% ---------------------------- END DOC HERE ---------------------------- %%%%%%% 
+\end{document}
